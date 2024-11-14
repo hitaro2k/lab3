@@ -10,7 +10,7 @@ window.addEventListener("click", function (event) {
                 num_res.textContent = result; 
                 expression = ""; 
             } catch (error) {
-                num_res.textContent = "Ошибка"; 
+                num_res.textContent = "!"; 
                 expression = ""; 
             }
         } else {
