@@ -6,16 +6,16 @@ window.addEventListener("click", function (event) {
         const buttonValue = event.target.textContent.trim();
         if (buttonValue === "=") {
             try {
-                const result = Function('"use strict"; return (' + expression + ')')();
+                const result = eval(expression); 
                 num_res.textContent = result; 
                 expression = ""; 
             } catch (error) {
+                num_res.textContent = "Ошибка"; 
                 expression = ""; 
             }
-        } 
-        else {
-            expression += buttonValue;
-            num_res.textContent = expression;
+        } else {
+            expression += buttonValue; 
+            num_res.textContent = expression; 
         }
     }
 });
